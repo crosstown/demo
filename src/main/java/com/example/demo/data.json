@@ -1,0 +1,15 @@
+[
+  {
+    "gaid": "809809-01",
+    "planId": "1234",
+    "elgRuleSetDetail": [
+      "busy": "sxxxc",
+      "try": 122,
+      "elegibityCriteria": [
+        "elegSerQual": "Y",
+        "minYear": 2,
+        "nimMty": 20
+      ]
+    ]
+  }
+]
