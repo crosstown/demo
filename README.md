@@ -1,1 +1,1 @@
-# Playing with git commands
+# Playing with git commands [![CircleCI](https://dl.circleci.com/status-badge/img/gh/crosstown/demo/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/crosstown/demo/tree/master)
