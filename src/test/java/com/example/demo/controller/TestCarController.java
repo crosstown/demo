@@ -25,7 +25,7 @@ import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-class TestCarController {
+public class TestCarController {
     @Mock
     private CarService carService;
 
@@ -85,6 +85,15 @@ class TestCarController {
         List<Car> cars = new ArrayList<>();
         when(carService.getFilters()).thenReturn(cars);
         ResponseEntity<List<Car>> response = carController.getCarFilters();
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(cars, response.getBody());
+    }
+
+    @Test
+    public void testdoing() {
+        String cars = new String();
+        when(carService.doing()).thenReturn(cars);
+        ResponseEntity<String> response = carController.getDoing();
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(cars, response.getBody());
     }

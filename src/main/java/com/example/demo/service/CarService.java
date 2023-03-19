@@ -39,15 +39,28 @@ public class CarService {
                 }).collect(Collectors.toList());
 
     }
+    public String doing () {
+        List<Car> cars = new ArrayList<>();
+        cars.add(createCarBlue());
+        cars.add(createCarGreen());
+        cars.add(createCarRojo());
+
+        return cars.stream()
+                .map(Car::getBrand)
+                .distinct()
+                .collect(Collectors.joining(" ;"));
+    }
     private List<Car> sorted() {
         List<Car> autos = new ArrayList<>();
         autos.add(createCarGreen());
         autos.add(createCarBlue());
         autos.add(createCarRojo());
 
-        autos.sort(Comparator.comparing(Car::getBrand));
+        autos.sort(Comparator.comparing(Car::getBrand).thenComparing(Car::getColor));
         return autos;
     }
+
+
 
     private Optional<Integer> getDays(LinkedHashMap<String, Object> map) {
         return map.values().stream()

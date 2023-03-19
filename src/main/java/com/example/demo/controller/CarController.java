@@ -48,9 +48,15 @@ public class CarController {
         return new ResponseEntity<>(cars, HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Car>> getCarFilters() {
         List<Car> cars = carService.getFilters();
+        return new ResponseEntity<>(cars, HttpStatus.OK);
+    }
+
+    @GetMapping("/doing")
+    public ResponseEntity<String> getDoing() {
+        String cars = carService.doing();
         return new ResponseEntity<>(cars, HttpStatus.OK);
     }
 
